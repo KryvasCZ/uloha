@@ -3,10 +3,10 @@ def is_palindrome(num_str):
 
 def next_palindrome(from_num, radix, next_palindrome):
     if radix < 2 or radix > 36:
-        return 0  # Neplatná číselná soustava
+        return 0  
 
     num = from_num + 1
-    max_num = 2**64 - 1  # Maximální hodnota pro unsigned long long v Pythonu
+    max_num = 2**64 - 1 
 
     while num <= max_num:
         num_str = format(num, f'0{radix}d')
@@ -15,9 +15,9 @@ def next_palindrome(from_num, radix, next_palindrome):
             return 1
         num += 1
 
-    return 0  # Není možné najít palindrom větší než from_num
+    return 0  
 
-# Testování funkce
+
 from_num = 181
 radix = 10
 next_palindrome_num = [0]
